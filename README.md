@@ -37,9 +37,9 @@ Vai ser valorizado a performance tanto para grandes matrizes como para pequenas,
 
 ## Solução
 
-Aplicação da ideia da cebola: dividir o problemas em camadas
+Aplicação da ideia da cebola: dividir o problema em camadas
 
-Para camada, usar threads para obter as linhas e colunas que compõem cada camada. Por fim a thread principal faz merge dos sub-arrays obtidos por cada array.
+Para cada camada, usar threads para obter as linhas e colunas que compõem cada camada. Por fim a thread principal faz merge dos sub-arrays obtidos por cada array.
 
 Auto-crítica: o código aqui apresentado poderia ser posteriormente melhorado e optimizado. As optimizações seriam sobretudo na junção dos resultados obtidos
 de cada thread. A thread principal atinge um estado bloqueante quando está a juntar os arrays obtidos por cada uma das subthreads. Deste modo, ela não consegue
