@@ -35,7 +35,16 @@ Vai ser valorizado a performance tanto para grandes matrizes como para pequenas,
 * Instalar o mvn [https://maven.apache.org/install.html]
 * Correr `mvn test`
 
-## Dúvidas
+## Solução
 
-Quaisquer dúvidas que tenhas, cria uma issue aqui no github :)
+Aplicação da ideia da cebola: dividir o problemas em camadas
+
+Para camada, usar threads para obter as linhas e colunas que compõem cada camada. Por fim a thread principal faz merge dos sub-arrays obtidos por cada array.
+
+Auto-crítica: o código aqui apresentado poderia ser posteriormente melhorado e optimizado. As optimizações seriam sobretudo na junção dos resultados obtidos
+de cada thread. A thread principal atinge um estado bloqueante quando está a juntar os arrays obtidos por cada uma das subthreads. Deste modo, ela não consegue
+delegar novas tarefas paras as outras threads, sendo ineficiente deste modo.
+
+Para este projeto foi utilizado o padrão Factory para gerar as diversas tarefas, através da classe SubTask (que deveria ter o nome SubTaskFactory!).
+
 
