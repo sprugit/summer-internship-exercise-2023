@@ -43,7 +43,7 @@ Para cada camada, usar threads para obter as linhas e colunas que compõem cada 
 
 Auto-crítica: o código aqui apresentado poderia ser posteriormente melhorado e optimizado. As optimizações seriam sobretudo na junção dos resultados obtidos
 de cada thread. A thread principal atinge um estado bloqueante quando está a juntar os arrays obtidos por cada uma das subthreads. Deste modo, ela não consegue
-delegar novas tarefas paras as outras threads, sendo ineficiente deste modo.
+delegar novas tarefas paras as outras threads, sendo ineficiente.
 
 Para este projeto foi utilizado o padrão Factory para gerar as diversas tarefas, através da classe SubTask (que deveria ter o nome SubTaskFactory!).
 
